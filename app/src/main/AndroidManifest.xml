@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pregamate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pregamate">
+        <activity android:name=".UserActivity"
+         android:label="User"
+            android:parentActivityName=".HomeActivity"/>
+        <!-- Welcome Activity -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="Welcome"
+            android:parentActivityName=".MainActivity" /> <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login"
+            android:parentActivityName=".MainActivity" /> <!-- Signup Activity Activity -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:label="@string/forgot_password"
+            android:parentActivityName=".LoginActivity" /> <!-- Signup Activity Activity -->
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/signup"
+            android:parentActivityName=".MainActivity" /> <!-- Home Activity -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Pregamate.NoActionBar" /> <!-- Main Activity -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
